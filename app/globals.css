@@ -1,0 +1,431 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Times New Roman", Times, Georgia, Cambria, serif;
+  --font-serif: "Times New Roman", Times, Georgia, Cambria, serif;
+}
+
+:root {
+  --background: #f7faf8;
+  --foreground: #0f172a;
+  --brand: #087653;
+  --brand-dark: #073d32;
+  --mint: #f0f7f3;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+}
+
+.dark {
+  --background: #090e17;
+  --foreground: #f8fafc;
+  --brand: #10b981;
+  --brand-dark: #04241d;
+  --mint: #064e3b;
+  --card-bg: #0e1726;
+  --card-border: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  font-family: "Times New Roman", Times, Georgia, Cambria, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Times New Roman", Times, Georgia, Cambria, serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+::selection {
+  background: #d1fae5;
+  color: #064e3b;
+}
+
+.dark ::selection {
+  background: #065f46;
+  color: #a7f3d0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Light & Dark High-End Glossy Glassmorphism Utilities */
+
+/* 1. Glossy Header Surface */
+.glossy-header {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(7, 61, 50, 0.08);
+  box-shadow: 
+    0 4px 20px -2px rgba(5, 57, 42, 0.07),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dark .glossy-header {
+  background: rgba(9, 14, 23, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.18);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.6), 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* 2. Specular Top Sheen Highlight */
+.glossy-sheen {
+  position: relative;
+}
+
+.glossy-sheen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.95) 25%, 
+    rgba(16, 185, 129, 0.45) 50%, 
+    rgba(255, 255, 255, 0.95) 75%, 
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.25s ease;
+}
+
+.dark .glossy-sheen::before {
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(16, 185, 129, 0.3) 25%, 
+    rgba(52, 211, 153, 0.9) 50%, 
+    rgba(16, 185, 129, 0.3) 75%, 
+    transparent 100%
+  );
+}
+
+/* 3. Multi-Layer Glossy Card */
+.glossy-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 250, 246, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(8, 118, 83, 0.12);
+  box-shadow: 
+    0 8px 24px -6px rgba(6, 78, 59, 0.08),
+    0 1px 2px 0 rgba(0, 0, 0, 0.02),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.glossy-card:hover {
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 
+    0 16px 36px -10px rgba(5, 57, 42, 0.14),
+    0 0 20px -4px rgba(16, 185, 129, 0.2),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+.dark .glossy-card {
+  background: rgba(14, 23, 38, 0.9);
+  border: 1px solid rgba(30, 41, 59, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.dark .glossy-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 14px 34px -10px rgba(16, 185, 129, 0.15);
+}
+
+/* 4. Glossy Action Pill / Badge */
+.glossy-pill {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 245, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 2px 8px -2px rgba(6, 78, 59, 0.09),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+.dark .glossy-pill {
+  background: rgba(19, 27, 46, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+}
+
+/* 5. Glossy Emerald Action Button */
+.glossy-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #09875f 0%, #065e42 100%);
+  box-shadow: 
+    0 4px 14px 0 rgba(8, 118, 83, 0.32),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glossy-btn:hover {
+  background: linear-gradient(180deg, #0aa373 0%, #07704f 100%);
+  box-shadow: 
+    0 6px 20px 0 rgba(8, 118, 83, 0.42),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .glossy-btn {
+  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* 6. Glossy Subsurface for Search Bars & Filters */
+.glossy-subsurface {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 4px 20px -4px rgba(5, 57, 42, 0.06),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.dark .glossy-subsurface {
+  background: rgba(14, 23, 38, 0.85);
+  border: 1px solid rgba(30, 41, 59, 0.9);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* 7. Bioluminescent Glow Accent */
+.glossy-glow {
+  box-shadow: 
+    0 0 50px -12px rgba(16, 185, 129, 0.28),
+    0 10px 25px -5px rgba(5, 57, 42, 0.08);
+}
+
+.dark .glossy-glow {
+  box-shadow: 
+    0 0 60px -10px rgba(52, 211, 153, 0.35),
+    0 0 25px -5px rgba(16, 185, 129, 0.2);
+}
+
+/* 8. Shimmer Sweep Animation */
+@keyframes glossy-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.glossy-sweep-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.glossy-sweep-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-20deg);
+  animation: glossy-sweep 7s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.dark .glossy-sweep-container::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(52, 211, 153, 0.15) 50%,
+    transparent 100%
+  );
+}
+
+/* 9. Floating Motion */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* 10. Specular Avatar Ring */
+.glossy-avatar-ring {
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(16, 185, 129, 0.5), rgba(255, 255, 255, 0.7));
+  box-shadow: 
+    0 8px 24px -4px rgba(6, 78, 59, 0.2),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.dark .glossy-avatar-ring {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.6), rgba(16, 185, 129, 0.2), rgba(30, 41, 59, 0.8));
+  box-shadow: 0 0 30px -4px rgba(16, 185, 129, 0.4);
+}
+
+/* 11. Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.25);
+  border-radius: 9999px;
+  border: 2px solid var(--background);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.55);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(52, 211, 153, 0.22);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(52, 211, 153, 0.5);
+}
+
+/* 12. Interactive Card 3D Lift & Border Bloom */
+.hover-glow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.hover-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px -15px rgba(6, 78, 59, 0.16),
+    0 0 25px -5px rgba(16, 185, 129, 0.25),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.dark .hover-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 22px 45px -15px rgba(0, 0, 0, 0.8),
+    0 0 35px -5px rgba(52, 211, 153, 0.35),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+/* 13. Animated Ambient Aurora Mesh */
+@keyframes aurora-pulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.45;
+  }
+  33% {
+    transform: scale(1.12) translate(18px, -18px);
+    opacity: 0.7;
+  }
+  66% {
+    transform: scale(0.92) translate(-15px, 12px);
+    opacity: 0.55;
+  }
+}
+
+.animate-aurora {
+  animation: aurora-pulse 14s ease-in-out infinite alternate;
+}
+
+/* 14. Radiant Emerald Text Gradient */
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #065f46 0%, #059669 45%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient-emerald {
+  background: linear-gradient(135deg, #d1fae5 0%, #34d399 50%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 15. Pulse Slow Animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 5s ease-in-out infinite;
+}
+
+/* 16. Luminous Dark-Mode Icon Badges */
+.dark-icon-badge {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #065f46;
+  box-shadow: 0 2px 8px rgba(6, 78, 59, 0.08), inset 0 1px 1.5px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:is(.dark, [data-theme="dark"]) .dark-icon-badge,
+.dark .dark-icon-badge {
+  background: linear-gradient(145deg, #09261d 0%, #03140f 100%) !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+  color: #34d399 !important;
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.6), 0 0 16px rgba(16, 185, 129, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+}
+
+:is(.dark, [data-theme="dark"]) .dark-icon-badge:hover,
+.dark .dark-icon-badge:hover {
+  background: linear-gradient(145deg, #0d382b 0%, #052119 100%) !important;
+  border-color: rgba(52, 211, 153, 0.8) !important;
+  box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.45), inset 0 1px 1.5px rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}

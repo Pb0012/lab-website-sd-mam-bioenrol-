@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="760" viewBox="0 0 640 760">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b513e"/><stop offset="1" stop-color="#a9d5bd"/></linearGradient>
+  <linearGradient id="shape" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5f5eb"/><stop offset="1" stop-color="#b8dfc8"/></linearGradient>
+</defs>
+<rect width="640" height="760" fill="url(#bg)"/>
+<circle cx="520" cy="120" r="180" fill="#fff" opacity=".08"/>
+<circle cx="90" cy="680" r="220" fill="#fff" opacity=".07"/>
+<path d="M130 760c14-150 93-227 190-227s176 77 190 227" fill="url(#shape)" opacity=".95"/>
+<circle cx="320" cy="285" r="116" fill="url(#shape)"/>
+<path d="M225 289c4-112 63-166 125-166 75 0 119 58 111 164-25-45-57-68-100-73-44 28-83 42-136 41z" fill="#0b513e" opacity=".8"/>
+<path d="M272 323c16 19 33 28 48 28s32-9 48-28" fill="none" stroke="#3d8a68" stroke-width="8" stroke-linecap="round"/>
+<text x="320" y="705" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0b513e">FACULTY PROFILE</text>
+</svg>
