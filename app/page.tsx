@@ -73,49 +73,48 @@ export default function Home() {
       <section className="relative isolate bg-[#f2f8f4] dark:bg-[#071318] overflow-hidden">
         <div className="pointer-events-none absolute -left-36 -top-40 h-[36rem] w-[36rem] rounded-full bg-emerald-200/50 dark:bg-emerald-950/40 blur-3xl animate-aurora" />
         <div className="pointer-events-none absolute -bottom-40 right-0 h-[32rem] w-[32rem] rounded-full bg-teal-200/40 dark:bg-teal-950/30 blur-3xl animate-aurora" style={{ animationDelay: '-7s' }} />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-[0.94fr_1.06fr] lg:gap-12 lg:py-20">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-[0.94fr_1.06fr] lg:gap-12 lg:py-20">
           <div className="relative z-10 max-w-2xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-emerald-500/30 bg-white/80 dark:bg-[#0e1b1f]/90 px-3.5 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-900 dark:text-emerald-300 shadow-[0_2px_10px_rgba(7,61,50,0.06),inset_0_1px_1px_rgba(255,255,255,1)] backdrop-blur-xl">
+            <div className="mb-4 sm:mb-5 inline-flex items-center gap-2 rounded-full border border-white/90 dark:border-emerald-500/30 bg-white/80 dark:bg-[#0e1b1f]/90 px-3 sm:px-3.5 py-1.5 sm:py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-emerald-900 dark:text-emerald-300 shadow-[0_2px_10px_rgba(7,61,50,0.06),inset_0_1px_1px_rgba(255,255,255,1)] backdrop-blur-xl">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               BIOENROL · NIT Durgapur
             </div>
-            <h1 className="max-w-[720px] text-[2.35rem] font-bold leading-[1.12] tracking-[-0.03em] text-[#103d32] dark:text-white sm:text-5xl lg:text-[3.35rem]">
-              <span className="block font-black tracking-wider text-gradient-emerald text-[2.75rem] sm:text-6xl lg:text-[4rem] font-serif mb-2">
+            <h1 className="max-w-[720px] text-[1.85rem] xs:text-3xl sm:text-4xl lg:text-[3.25rem] font-bold leading-[1.15] tracking-tight text-[#103d32] dark:text-white">
+              <span className="block font-black tracking-wider text-gradient-emerald text-3xl xs:text-4xl sm:text-6xl lg:text-[4rem] font-serif mb-2 sm:mb-3">
                 BIOENROL
               </span>
               <span className="block leading-[1.18]">
-                <span className="text-gradient-emerald font-black">Bio</span>logical &amp;{" "}
-                <span className="text-gradient-emerald font-black">En</span>vi<span className="text-gradient-emerald font-black">ro</span>nmental
+                <span className="text-gradient-emerald font-black">Bio</span>logical &amp; <span className="text-gradient-emerald font-black">En</span>vi<span className="text-gradient-emerald font-black">ro</span>nmental
               </span>
               <span className="block leading-[1.18]">
                 Research <span className="text-gradient-emerald font-black">L</span>aboratory
               </span>
             </h1>
-            <div className="mt-3.5 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase text-emerald-800 dark:text-emerald-400">
+            <div className="mt-3 sm:mt-3.5 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide uppercase text-emerald-800 dark:text-emerald-400">
               <span>Science & Technology</span>
               <span className="text-emerald-400 dark:text-emerald-600">·</span>
               <span>Innovation</span>
               <span className="text-emerald-400 dark:text-emerald-600">·</span>
               <span>Sustainability</span>
             </div>
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg sm:leading-8">
+            <p className="mt-4 sm:mt-5 max-w-xl text-sm leading-relaxed sm:text-base sm:leading-7 lg:text-lg lg:leading-8 text-slate-600 dark:text-slate-300">
               Led by <strong>Prof. Susmita Dutta</strong> at the Department of Chemical Engineering, National Institute of Technology Durgapur, BIOENROL focuses on developing sustainable bioprocesses and innovative treatment strategies for industrial wastewater, exploring phycoremediation, biochemical reaction engineering, adsorption, CO₂ capture, and environmental biotechnology to address critical challenges in pollution control and resource recovery.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/research" className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#09875f] to-[#065e42] hover:from-[#0aa373] hover:to-[#07704f] dark:from-emerald-600 dark:to-teal-700 px-5 py-3.5 text-sm font-semibold text-white shadow-[0_4px_16px_rgba(8,118,83,0.32),inset_0_1px_1.5px_rgba(255,255,255,0.45)] transition hover:-translate-y-0.5 active:scale-95">
-                Explore our research <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+            <div className="mt-6 sm:mt-8 flex flex-col xs:flex-row gap-3 w-full sm:w-auto">
+              <Link href="/research" className="w-full xs:w-auto justify-center group inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#09875f] to-[#065e42] hover:from-[#0aa373] hover:to-[#07704f] dark:from-emerald-600 dark:to-teal-700 px-5 py-3 sm:py-3.5 text-sm font-semibold text-white shadow-[0_4px_16px_rgba(8,118,83,0.32),inset_0_1px_1.5px_rgba(255,255,255,0.45)] transition hover:-translate-y-0.5 active:scale-95 text-center">
+                Explore our research <ArrowRight size={16} className="transition group-hover:translate-x-1 shrink-0" />
               </Link>
-              <Link href="/about" className="inline-flex items-center gap-2 rounded-xl border border-white/90 dark:border-emerald-500/30 bg-white/75 dark:bg-[#0e1b1f]/80 px-5 py-3.5 text-sm font-semibold text-[#164b3d] dark:text-emerald-300 shadow-[0_2px_8px_rgba(7,61,50,0.06),inset_0_1px_1px_rgba(255,255,255,1)] backdrop-blur-xl transition hover:border-emerald-400 hover:bg-white dark:hover:bg-[#132328] hover:-translate-y-0.5">
+              <Link href="/about" className="w-full xs:w-auto justify-center inline-flex items-center gap-2 rounded-xl border border-white/90 dark:border-emerald-500/30 bg-white/75 dark:bg-[#0e1b1f]/80 px-5 py-3 sm:py-3.5 text-sm font-semibold text-[#164b3d] dark:text-emerald-300 shadow-[0_2px_8px_rgba(7,61,50,0.06),inset_0_1px_1px_rgba(255,255,255,1)] backdrop-blur-xl transition hover:border-emerald-400 hover:bg-white dark:hover:bg-[#132328] hover:-translate-y-0.5 text-center">
                 About the laboratory
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap gap-x-3 gap-y-2.5 text-xs font-semibold text-slate-700 dark:text-emerald-200">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Sprout size={15} className="text-emerald-700 dark:text-emerald-400" /> Biochemical engineering</span>
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Beaker size={15} className="text-emerald-700 dark:text-emerald-400" /> Phycoremediation & Adsorption</span>
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Waves size={15} className="text-emerald-700 dark:text-emerald-400" /> Environmental solutions</span>
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-x-3 sm:gap-y-2.5 text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-emerald-200">
+              <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Sprout size={14} className="text-emerald-700 dark:text-emerald-400 shrink-0" /> Biochemical engineering</span>
+              <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Beaker size={14} className="text-emerald-700 dark:text-emerald-400 shrink-0" /> Phycoremediation & Adsorption</span>
+              <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/70 dark:bg-emerald-950/50 border border-emerald-900/10 dark:border-emerald-500/30 shadow-xs dark:shadow-[0_0_12px_rgba(16,185,129,0.12)]"><Waves size={14} className="text-emerald-700 dark:text-emerald-400 shrink-0" /> Environmental solutions</span>
             </div>
           </div>
 
@@ -172,13 +171,13 @@ export default function Home() {
         <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-white/90 dark:border-slate-800 bg-white/80 dark:bg-[#0e1726]/90 shadow-[0_16px_45px_-20px_rgba(4,62,46,0.12),inset_0_1px_2px_rgba(255,255,255,1)] dark:shadow-[0_16px_45px_-30px_rgba(0,0,0,0.6)] backdrop-blur-2xl md:grid-cols-4">
           {[
             { icon: BookOpen, title: "Research projects", detail: "Explore our work", href: "/projects" },
-            { icon: Microscope, title: "Research facilities", detail: "Experimental capabilities", href: "/facilities" },
-            { icon: Users, title: "Research team", detail: "People behind the work", href: "/members" },
+            { icon: Microscope, title: "Research facilities", detail: "Capabilities", href: "/facilities" },
+            { icon: Users, title: "Research team", detail: "Our people", href: "/members" },
             { icon: Building2, title: "Collaborations", detail: "Academic & industry", href: "/about" },
           ].map(({ icon: Icon, title, detail, href }, index) => (
-            <Link key={title} href={href} className={`flex items-center gap-3 px-4 py-5 sm:px-6 hover:bg-white/80 dark:hover:bg-emerald-950/20 transition-all group ${index % 2 === 0 ? "border-r border-emerald-950/8 dark:border-slate-800" : ""} ${index < 2 ? "border-b border-emerald-950/8 dark:border-slate-800 md:border-b-0" : ""} ${index === 1 ? "md:border-r" : ""} ${index === 2 ? "md:border-r" : ""}`}>
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark-icon-badge group-hover:scale-110 transition-all duration-300"><Icon size={21} /></span>
-              <span><span className="block text-sm font-semibold text-[#173f35] dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">{title}</span><span className="mt-0.5 block text-[11px] text-slate-500 dark:text-slate-400">{detail}</span></span>
+            <Link key={title} href={href} className={`flex items-center gap-2.5 sm:gap-3.5 px-3 py-4 sm:px-6 sm:py-5 hover:bg-white/80 dark:hover:bg-emerald-950/20 transition-all group ${index % 2 === 0 ? "border-r border-emerald-950/8 dark:border-slate-800" : ""} ${index < 2 ? "border-b border-emerald-950/8 dark:border-slate-800 md:border-b-0" : ""} ${index === 1 ? "md:border-r" : ""} ${index === 2 ? "md:border-r" : ""}`}>
+              <span className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl dark-icon-badge group-hover:scale-110 transition-all duration-300"><Icon size={18} className="sm:hidden" /><Icon size={21} className="hidden sm:block" /></span>
+              <span className="min-w-0"><span className="block text-xs sm:text-sm font-semibold text-[#173f35] dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors truncate">{title}</span><span className="mt-0.5 block text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 truncate">{detail}</span></span>
             </Link>
           ))}
         </div>

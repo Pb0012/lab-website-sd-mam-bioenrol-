@@ -24,10 +24,10 @@ export default function AboutPage() {
             <Building2 className="h-3.5 w-3.5 text-emerald-700 dark:text-emerald-400" />
             <span>NIT Durgapur • Department of Chemical Engineering</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#103d32] dark:text-white tracking-tight mb-2">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#103d32] dark:text-white tracking-tight mb-2 leading-tight">
             BIOENROL · <span className="text-gradient-emerald font-black">Bio</span>logical &amp; <span className="text-gradient-emerald font-black">En</span>vi<span className="text-gradient-emerald font-black">ro</span>nmental Research <span className="text-gradient-emerald font-black">L</span>aboratory
           </h1>
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase text-emerald-800 dark:text-emerald-400">
+          <div className="mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide uppercase text-emerald-800 dark:text-emerald-400">
             <span>Science & Technology</span>
             <span className="text-emerald-400 dark:text-emerald-600">·</span>
             <span>Innovation</span>

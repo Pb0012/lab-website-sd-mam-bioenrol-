@@ -14,9 +14,9 @@ interface SectionHeadingProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function SectionHeading({ title, subtitle, centered = false, className, ...props }: SectionHeadingProps) {
   return (
-    <div className={cn("mb-12", centered && "text-center", className)} {...props}>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-emerald-900 dark:text-emerald-400 mb-4">{title}</h2>
-      {subtitle && <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">{subtitle}</p>}
+    <div className={cn("mb-8 sm:mb-12", centered && "text-center", className)} {...props}>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-emerald-900 dark:text-emerald-400 mb-3 sm:mb-4">{title}</h2>
+      {subtitle && <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>}
     </div>
   );
 }

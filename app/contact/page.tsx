@@ -51,10 +51,10 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-slate-900 dark:text-white mb-1">Faculty & Lab Contact</h4>
                     <p className="text-slate-600 dark:text-slate-300 text-sm mb-1">
-                      Institute: <a href="mailto:susmita.dutta@che.nitdgp.ac.in" className="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline">susmita.dutta@che.nitdgp.ac.in</a>
+                      Institute: <a href="mailto:susmita.dutta@che.nitdgp.ac.in" className="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline break-all">susmita.dutta@che.nitdgp.ac.in</a>
                     </p>
                     <p className="text-slate-600 dark:text-slate-300 text-sm">
-                      Department: <a href="mailto:sdutta.che@nitdgp.ac.in" className="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline">sdutta.che@nitdgp.ac.in</a>
+                      Department: <a href="mailto:sdutta.che@nitdgp.ac.in" className="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline break-all">sdutta.che@nitdgp.ac.in</a>
                     </p>
                   </div>
                 </CardContent>

@@ -150,14 +150,14 @@ export default function PISpotlight() {
               </div>
 
               {/* Citation Indexing Badge */}
-              <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-500/20 text-[11px] font-semibold text-emerald-900 dark:text-emerald-300">
+              <div className="flex flex-wrap items-center justify-around sm:justify-between gap-1.5 px-3 py-2 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-500/20 text-[10px] sm:text-[11px] font-semibold text-emerald-900 dark:text-emerald-300">
                 <span className="flex items-center gap-1">
                   <Award size={13} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
                   <span>Scholar h-index: <strong>31</strong></span>
                 </span>
-                <span className="text-emerald-300 dark:text-emerald-700">|</span>
+                <span className="text-emerald-300 dark:text-emerald-700 hidden xs:inline">|</span>
                 <span>i10-index: <strong>72</strong></span>
-                <span className="text-emerald-300 dark:text-emerald-700">|</span>
+                <span className="text-emerald-300 dark:text-emerald-700 hidden xs:inline">|</span>
                 <span>Scopus: <strong>22</strong></span>
               </div>
 
@@ -240,15 +240,15 @@ export default function PISpotlight() {
                 </div>
 
                 {/* Team & Contact Links */}
-                <div className="flex items-center gap-3 text-xs">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs w-full sm:w-auto">
                   <a 
                     href={`mailto:${professor.email}`}
-                    className="inline-flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 font-medium transition"
+                    className="inline-flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 font-medium transition break-all"
                   >
-                    <Mail size={15} className="text-emerald-600 dark:text-emerald-400" />
+                    <Mail size={15} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
                     <span>{professor.email}</span>
                   </a>
-                  <span className="text-slate-300 dark:text-slate-600">|</span>
+                  <span className="text-slate-300 dark:text-slate-600 hidden xs:inline">|</span>
                   <Link
                     href="/members"
                     className="inline-flex items-center gap-1 font-bold text-emerald-700 dark:text-emerald-400 hover:underline"

@@ -31,32 +31,32 @@ export default function DashboardPage() {
       <div className="pointer-events-none absolute -right-40 top-1/2 h-96 w-96 rounded-full bg-teal-200/35 dark:bg-teal-950/20 blur-3xl animate-aurora" style={{ animationDelay: "-8s" }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8 sm:mb-12">
           <SectionHeading title="Research Dashboard" subtitle="Experimental cultivation & reactor monitoring at the Biological & Environmental Research Laboratory, NIT Durgapur" className="mb-0" />
-          <div className="mt-4 md:mt-0 flex items-center gap-2 text-sm font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-500/30 px-3 py-1.5 rounded-full shadow-xs">
-            <span className="relative flex h-3 w-3">
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-500/30 px-3 py-1.5 rounded-full shadow-xs shrink-0">
+            <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-emerald-500"></span>
             </span>
             Live Monitoring Active
           </div>
         </div>
 
         {/* KPI Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
           {[
             { ...cards[0], cardBg: "bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/40 dark:from-emerald-950/30 dark:via-[#0e1726] dark:to-[#07131d]", cardBorder: "border-emerald-200/80 dark:border-emerald-500/30", valColor: "text-emerald-900 dark:text-emerald-300" },
             { ...cards[1], cardBg: "bg-gradient-to-br from-blue-50/90 via-white to-sky-50/40 dark:from-blue-950/30 dark:via-[#0e1726] dark:to-[#07131d]", cardBorder: "border-blue-200/80 dark:border-blue-500/30", valColor: "text-blue-900 dark:text-blue-300" },
             { ...cards[2], cardBg: "bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/40 dark:from-teal-950/30 dark:via-[#0e1726] dark:to-[#07131d]", cardBorder: "border-teal-200/80 dark:border-teal-500/30", valColor: "text-teal-900 dark:text-teal-300" },
             { ...cards[3], cardBg: "bg-gradient-to-br from-rose-50/90 via-white to-amber-50/40 dark:from-rose-950/30 dark:via-[#0e1726] dark:to-[#07131d]", cardBorder: "border-rose-200/80 dark:border-rose-500/30", valColor: "text-rose-900 dark:text-rose-300" },
           ].map((card, i) => (
-            <div key={i} className={`rounded-2xl p-6 border ${card.cardBorder} ${card.cardBg} shadow-[0_6px_20px_-6px_rgba(6,78,59,0.08),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex items-center gap-4 transition-all duration-300`}>
-              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border ${card.bg} ${card.color}`}>
-                <card.icon className="h-6 w-6" />
+            <div key={i} className={`rounded-2xl p-3.5 sm:p-6 border ${card.cardBorder} ${card.cardBg} shadow-[0_6px_20px_-6px_rgba(6,78,59,0.08),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4 transition-all duration-300`}>
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 border ${card.bg} ${card.color}`}>
+                <card.icon className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
-              <div>
-                <p className="text-xs font-bold text-slate-700 dark:text-slate-300">{card.title}</p>
-                <p className={`text-2xl font-black ${card.valColor} mt-0.5`}>{card.value}</p>
+              <div className="min-w-0">
+                <p className="text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-300 truncate">{card.title}</p>
+                <p className={`text-xl sm:text-2xl font-black ${card.valColor} mt-0.5`}>{card.value}</p>
               </div>
             </div>
           ))}

@@ -350,106 +350,109 @@ export default function MembersPage() {
                 >
                   Google Scholar Profile <BookOpen size={12} />
                 </a>
-                <span className="text-slate-600 dark:text-slate-300 flex items-center gap-1.5 font-medium ml-1">
-                  <Mail size={14} className="text-emerald-600 dark:text-emerald-400" />
-                  sdutta.che@nitdgp.ac.in
-                </span>
+                <a 
+                  href="mailto:sdutta.che@nitdgp.ac.in" 
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 font-medium transition break-all"
+                >
+                  <Mail size={14} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span>sdutta.che@nitdgp.ac.in</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         {/* Quick Cohort Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-10">
           
           {/* Card 1: Total Researchers */}
-          <div className="rounded-2xl border border-emerald-200/90 dark:border-emerald-500/30 bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/40 dark:from-emerald-950/40 dark:via-[#0e1726] dark:to-[#09111e] p-5 shadow-[0_6px_22px_-6px_rgba(6,78,59,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl border border-emerald-200/90 dark:border-emerald-500/30 bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/40 dark:from-emerald-950/40 dark:via-[#0e1726] dark:to-[#09111e] p-3.5 sm:p-5 shadow-[0_6px_22px_-6px_rgba(6,78,59,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100/90 dark:bg-gradient-to-br dark:from-emerald-950/90 dark:via-emerald-900/60 dark:to-[#04281f] text-emerald-800 dark:text-emerald-300 border border-emerald-300/80 dark:border-emerald-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(16,185,129,0.25)]">
-                  <Users size={17} />
+                <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-emerald-100/90 dark:bg-gradient-to-br dark:from-emerald-950/90 dark:via-emerald-900/60 dark:to-[#04281f] text-emerald-800 dark:text-emerald-300 border border-emerald-300/80 dark:border-emerald-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(16,185,129,0.25)]">
+                  <Users size={16} />
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100/80 dark:bg-emerald-950/90 text-emerald-900 dark:text-emerald-300 border border-emerald-300/50 dark:border-emerald-500/30">
+                <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-emerald-100/80 dark:bg-emerald-950/90 text-emerald-900 dark:text-emerald-300 border border-emerald-300/50 dark:border-emerald-500/30">
                   Total
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl font-black tracking-tight text-emerald-900 dark:text-emerald-300 mt-1">
+              <div className="text-2xl sm:text-4xl font-black tracking-tight text-emerald-900 dark:text-emerald-300 mt-1">
                 23
               </div>
-              <div className="text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
+              <div className="text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
                 Total Researchers
               </div>
             </div>
-            <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-3 pt-2.5 border-t border-emerald-100 dark:border-emerald-950/60">
+            <div className="text-[10px] sm:text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-emerald-100 dark:border-emerald-950/60">
               Mentored by Prof. Dutta
             </div>
           </div>
 
           {/* Card 2: Postdoctoral Fellow */}
-          <div className="rounded-2xl border border-purple-200/80 dark:border-purple-500/30 bg-gradient-to-br from-purple-50/90 via-white to-indigo-50/30 dark:from-purple-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-5 shadow-[0_6px_22px_-6px_rgba(147,51,234,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl border border-purple-200/80 dark:border-purple-500/30 bg-gradient-to-br from-purple-50/90 via-white to-indigo-50/30 dark:from-purple-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-3.5 sm:p-5 shadow-[0_6px_22px_-6px_rgba(147,51,234,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100/90 dark:bg-gradient-to-br dark:from-purple-950/90 dark:via-purple-900/60 dark:to-[#1e0735] text-purple-900 dark:text-purple-300 border border-purple-300/80 dark:border-purple-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(168,85,247,0.25)]">
-                  <Sparkles size={17} />
+                <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-purple-100/90 dark:bg-gradient-to-br dark:from-purple-950/90 dark:via-purple-900/60 dark:to-[#1e0735] text-purple-900 dark:text-purple-300 border border-purple-300/80 dark:border-purple-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(168,85,247,0.25)]">
+                  <Sparkles size={16} />
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100/80 dark:bg-purple-950/90 text-purple-900 dark:text-purple-300 border border-purple-300/50 dark:border-purple-500/30">
+                <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-purple-100/80 dark:bg-purple-950/90 text-purple-900 dark:text-purple-300 border border-purple-300/50 dark:border-purple-500/30">
                   NPDF
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl font-black tracking-tight text-purple-900 dark:text-purple-300 mt-1">
+              <div className="text-2xl sm:text-4xl font-black tracking-tight text-purple-900 dark:text-purple-300 mt-1">
                 {postdocCount}
               </div>
-              <div className="text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
+              <div className="text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
                 Postdoctoral Fellow
               </div>
             </div>
-            <div className="text-[11px] text-purple-800 dark:text-purple-400 font-semibold mt-3 pt-2.5 border-t border-purple-100 dark:border-purple-950/60">
+            <div className="text-[10px] sm:text-[11px] text-purple-800 dark:text-purple-400 font-semibold mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-purple-100 dark:border-purple-950/60">
               National Fellow (ANRF)
             </div>
           </div>
 
           {/* Card 3: Ongoing PhD Scholars */}
-          <div className="rounded-2xl border border-teal-200/80 dark:border-teal-500/30 bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/30 dark:from-teal-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-5 shadow-[0_6px_22px_-6px_rgba(13,148,136,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl border border-teal-200/80 dark:border-teal-500/30 bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/30 dark:from-teal-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-3.5 sm:p-5 shadow-[0_6px_22px_-6px_rgba(13,148,136,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-teal-100/90 dark:bg-gradient-to-br dark:from-teal-950/90 dark:via-teal-900/60 dark:to-[#04221f] text-teal-900 dark:text-teal-300 border border-teal-300/80 dark:border-teal-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(20,184,166,0.25)]">
-                  <GraduationCap size={17} />
+                <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-teal-100/90 dark:bg-gradient-to-br dark:from-teal-950/90 dark:via-teal-900/60 dark:to-[#04221f] text-teal-900 dark:text-teal-300 border border-teal-300/80 dark:border-teal-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(20,184,166,0.25)]">
+                  <GraduationCap size={16} />
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-100/80 dark:bg-teal-950/90 text-teal-900 dark:text-teal-300 border border-teal-300/50 dark:border-teal-500/30">
+                <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-teal-100/80 dark:bg-teal-950/90 text-teal-900 dark:text-teal-300 border border-teal-300/50 dark:border-teal-500/30">
                   Active PhD
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl font-black tracking-tight text-teal-900 dark:text-teal-300 mt-1">
+              <div className="text-2xl sm:text-4xl font-black tracking-tight text-teal-900 dark:text-teal-300 mt-1">
                 {phdOngoingCount}
               </div>
-              <div className="text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
+              <div className="text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
                 Ongoing Ph.D. Scholars
               </div>
             </div>
-            <div className="text-[11px] text-teal-800 dark:text-teal-400 font-semibold mt-3 pt-2.5 border-t border-teal-100 dark:border-teal-950/60">
+            <div className="text-[10px] sm:text-[11px] text-teal-800 dark:text-teal-400 font-semibold mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-teal-100 dark:border-teal-950/60">
               Active Doctoral Research
             </div>
           </div>
 
           {/* Card 4: Awarded PhD Alumni */}
-          <div className="rounded-2xl border border-blue-200/80 dark:border-blue-500/30 bg-gradient-to-br from-blue-50/90 via-white to-sky-50/30 dark:from-blue-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-5 shadow-[0_6px_22px_-6px_rgba(37,99,235,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl border border-blue-200/80 dark:border-blue-500/30 bg-gradient-to-br from-blue-50/90 via-white to-sky-50/30 dark:from-blue-950/30 dark:via-[#0e1726] dark:to-[#09111e] p-3.5 sm:p-5 shadow-[0_6px_22px_-6px_rgba(37,99,235,0.1),inset_0_1px_1.5px_rgba(255,255,255,1)] hover-glow glossy-sheen flex flex-col justify-between transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-100/90 dark:bg-gradient-to-br dark:from-blue-950/90 dark:via-blue-900/60 dark:to-[#071936] text-blue-900 dark:text-blue-300 border border-blue-300/80 dark:border-blue-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(59,130,246,0.25)]">
-                  <Award size={17} />
+                <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-blue-100/90 dark:bg-gradient-to-br dark:from-blue-950/90 dark:via-blue-900/60 dark:to-[#071936] text-blue-900 dark:text-blue-300 border border-blue-300/80 dark:border-blue-500/40 shadow-xs dark:shadow-[0_0_14px_rgba(59,130,246,0.25)]">
+                  <Award size={16} />
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-100/80 dark:bg-blue-950/90 text-blue-900 dark:text-blue-300 border border-blue-300/50 dark:border-blue-500/30">
+                <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-blue-100/80 dark:bg-blue-950/90 text-blue-900 dark:text-blue-300 border border-blue-300/50 dark:border-blue-500/30">
                   Awarded
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl font-black tracking-tight text-blue-900 dark:text-blue-300 mt-1">
+              <div className="text-2xl sm:text-4xl font-black tracking-tight text-blue-900 dark:text-blue-300 mt-1">
                 {alumniCount}
               </div>
-              <div className="text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
+              <div className="text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-100 mt-1">
                 Awarded Ph.D. Alumni
               </div>
             </div>
-            <div className="text-[11px] text-blue-800 dark:text-blue-400 font-semibold mt-3 pt-2.5 border-t border-blue-100 dark:border-blue-950/60">
+            <div className="text-[10px] sm:text-[11px] text-blue-800 dark:text-blue-400 font-semibold mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-blue-100 dark:border-blue-950/60">
               In Academia & Industry
             </div>
           </div>
